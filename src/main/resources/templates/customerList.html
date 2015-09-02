@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="internalLayout">
+<head>
+<meta charset="UTF-8" />
+<title>Mongo Demo</title>
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="container">
+			<div class="panel panel-default">
+			  <div class="panel-heading"><button type="button" class="btn btn-default">Add</button></div>
+			  <div class="panel-body">
+			    <div class="col-md-12">
+					<div class="table-responsive">
+					    <table class="table">
+					        <thead>
+					            <tr>
+					                <th>#</th>
+					                <th>Name</th>
+					                <th>Address</th>
+					                <th>City</th>
+					                <th>State</th>
+					                <th>ZipCode</th>
+					                <th>Action</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr th:each="customer,row : ${customerList}">
+					            	<td th:text="${row.count}"></td>
+					            	<td th:text="${customer.firstName + ' ' + customer.lastName}"></td>
+					            	<td th:text="${customer.address}"></td>
+					            	<td th:text="${customer.city}"></td>
+					            	<td th:text="${customer.state}"></td>
+					            	<td th:text="${customer.zipcode}"></td>
+					            	<td></td>
+					            </tr>
+					        </tbody>
+		            	</table>
+	            	</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

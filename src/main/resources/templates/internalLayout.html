@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Mongo Demo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+	
+	<th:block th:include="header :: copy"></th:block>
+		
+	<th:block th:include="sidebar :: copy"></th:block>
+
+	<section layout:fragment="content">
+
+	</section>
+	
+	<th:block th:include="footer :: copy"></th:block>
+	
+</body>
+</html>
