@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8" />
-<title>Mongo Demo</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<meta charset="UTF-8" />
+	<title>Mongo Demo</title>
+	
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="dist/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="dist/css/ionicons.min.css" />
+    
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css" />
+    
+    <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css" />
 </head>
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+		<th:block th:include="header :: copy"></th:block>
+			
+		<th:block th:include="sidebar :: copy"></th:block>
 	
-	<th:block th:include="header :: copy"></th:block>
+		<section layout:fragment="content">
+	
+		</section>
 		
-	<th:block th:include="sidebar :: copy"></th:block>
-
-	<section layout:fragment="content">
-
-	</section>
+		<th:block th:include="footer :: copy"></th:block>
+	</div>
 	
-	<th:block th:include="footer :: copy"></th:block>
-	
+	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="dist/js/app.min.js"></script>
 </body>
 </html>
