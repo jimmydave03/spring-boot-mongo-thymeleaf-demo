@@ -5,8 +5,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-	    <th:block th:fragment="copy">
-	    	
-	    </th:block>	
+    <th:block th:fragment="copy">
+    	 <aside class="main-sidebar">
+	        <!-- sidebar: style can be found in sidebar.less -->
+	        <section class="sidebar">
+	
+	          <!-- Sidebar user panel (optional) -->
+	          <div class="user-panel">
+	            <div class="pull-left image">
+	              <img src="dist/img/DSC01164.jpg" class="img-circle" alt="User Image" />
+	            </div>
+	            <div class="pull-left info">
+	              <p>Jimmy Dave</p>
+	              <h6>Spring | Thymeleaf | Mongo</h6>
+	            </div>
+	          </div>
+	
+	          <!-- Sidebar Menu -->
+	          <ul class="sidebar-menu">
+	            <li class="header">Navigation</li>
+	            <li class="active"><a th:href="@{/}"><i class="fa fa-link"></i> <span>Customer List</span></a></li>
+	          </ul><!-- /.sidebar-menu -->
+	        </section>
+	        <!-- /.sidebar -->
+	      </aside>
+    </th:block>	
 </body>
 </html>

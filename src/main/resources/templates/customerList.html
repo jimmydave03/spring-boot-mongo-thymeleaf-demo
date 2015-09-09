@@ -6,44 +6,67 @@
 <head>
 <meta charset="UTF-8" />
 <title>Mongo Demo</title>
+
+<style type="text/css">
+	.text-center td,th{text-align:center;}
+</style>
 </head>
-<body>
-	<section layout:fragment="content">
-		<div class="container">
-			<div class="panel panel-default">
-			  <div class="panel-heading"><button type="button" class="btn btn-default">Add</button></div>
-			  <div class="panel-body">
-			    <div class="col-md-12">
-					<div class="table-responsive">
-					    <table class="table">
-					        <thead>
-					            <tr>
-					                <th>#</th>
-					                <th>Name</th>
-					                <th>Address</th>
-					                <th>City</th>
-					                <th>State</th>
-					                <th>ZipCode</th>
-					                <th>Action</th>
-					            </tr>
-					        </thead>
-					        <tbody>
-					            <tr th:each="customer,row : ${customerList}">
-					            	<td th:text="${row.count}"></td>
-					            	<td th:text="${customer.firstName + ' ' + customer.lastName}"></td>
-					            	<td th:text="${customer.address}"></td>
-					            	<td th:text="${customer.city}"></td>
-					            	<td th:text="${customer.state}"></td>
-					            	<td th:text="${customer.zipcode}"></td>
-					            	<td></td>
-					            </tr>
-					        </tbody>
-		            	</table>
-	            	</div>
-				</div>
-				</div>
-			</div>
-		</div>
+ <body>
+    <section layout:fragment="content">
+			<div class="content-wrapper">
+		        <!-- Content Header (Page header) -->
+		        <section class="content">
+			        <div class="row">
+			            <div class="col-md-12">
+			           		<div class="box">
+				                <div class="box-header with-border">
+				                	<div class="col-md-2 col-sm-4 col-xs-7">
+				                  		<button class="btn btn-block btn-default"><i class="fa fa-fw fa-user-plus"></i> &nbsp;Add Customer</button>
+				                  	</div>
+				                </div><!-- /.box-header -->
+                			</div>
+                		</div>
+           			</div>
+          			<div class="row">
+            			<div class="col-md-12">
+              				<div class="box">
+	                			<div class="box-header with-border">
+	                  				<h3 class="box-title">Customer Standard Table</h3>
+	                			</div><!-- /.box-header -->
+                			<div class="box-body table-responsive no-padding">
+		                  		<table class="table table-hover">
+					                <thead>
+					                   <tr class="text-center">
+							               <th>#</th>
+							               <th>Name</th>
+							               <th>Address</th>
+							               <th>City</th>
+							               <th>State</th>
+							               <th>ZipCode</th>
+							               <th>Action</th>
+							         	</tr>
+					                </thead>
+			                 		<tbody>
+				                  		<tr th:each="customer,row : ${customerList}" class="text-center"> 
+							            	<td th:text="${row.count}"></td>
+							            	<td th:text="${customer.firstName + ' ' + customer.lastName}"></td>
+							            	<td th:text="${customer.address}"></td>
+							            	<td th:text="${customer.city}"></td>
+							            	<td th:text="${customer.state}"></td>
+							            	<td th:text="${customer.zipcode}"></td>
+						            		<td>
+						            			<i class="fa fa-fw fa-edit text-success" style="font-size: x-large;"></i>
+						            			<i class="fa fa-fw fa-close text-danger" style="font-size: x-large;"></i>
+						            		</td>
+				                  		</tr>
+		                  			</tbody>
+	                  			</table>
+               				</div>
+              			</div>
+             		</div>
+           		</div>
+        	</section>
+    	</div><!-- /.content-wrapper -->
 	</section>
 </body>
 </html>
